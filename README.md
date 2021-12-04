@@ -1,6 +1,6 @@
 # The project for use Dbrain Api.
 
-For install use the nuget package.
+For install use the [nuget package](https://www.nuget.org/packages/DbrainApi) .
 ```
 dotnet add package DbrainApi
 ```
