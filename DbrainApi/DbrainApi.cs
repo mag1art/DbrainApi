@@ -141,17 +141,14 @@ namespace DbrainApi
         {
             try
             {
-                var url = $"{_baseUrl}/result/{taskId}?return_crops=false&token={_token}";
-                using (var httpClient = new HttpClient())
+                var url = $"{_baseUrl}/result/{taskId}?return_crops=false&token={_token}";                
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), url))
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), url))
-                    {
-                        request.Headers.TryAddWithoutValidation("accept", "application/json");
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
 
-                        var response = await httpClient.SendAsync(request);
-                        return await response.Content.ReadAsStringAsync();
-                    }
-                }
+                    var response = await _httpClient.SendAsync(request);
+                    return await response.Content.ReadAsStringAsync();
+                }                
             }
             catch (Exception ex)
             {
