@@ -1,4 +1,4 @@
-# The project for use Dbrain Api.
+# The project for use [Dbrain.io](https://dbrain.io/) Api and [Handl.ai](https://handl.ai/).
 
 For install use the [nuget package](https://www.nuget.org/packages/DbrainApi) .
 ```
